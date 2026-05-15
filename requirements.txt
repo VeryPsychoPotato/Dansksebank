@@ -1,0 +1,40 @@
+## Evaluation Criteria
+
+| Area | Weight | What we look at |
+|---|---|---|
+| Correctness | 30% | Does the code produce correct results? Are edge cases handled? |
+| Code Quality | 25% | Readability, structure, naming, no dead code |
+| Testing | 20% | Coverage, meaningful assertions, edge cases |
+| Performance | 15% | Efficient use of pandas/Polars, no unnecessary loops |
+| Architecture | 10% | Design decisions, separation of concerns, extensibility |
+
+---
+
+## Deliverables
+
+Your repository should contain:
+
+```
+.
+├── README.md               # Setup instructions, design decisions, benchmark results
+├── requirements.txt
+├── section1/
+│   ├── cleaning.py
+│   ├── sas_migration.py
+│   └── tests/
+│       └── test_cleaning.py
+│       └── test_sas_migration.py
+├── section2/
+│   ├── pipeline.py
+│   ├── optimisation.py
+│   └── benchmark.py
+├── section3/
+│   └── queries.sql
+└── section4/
+    ├── code_review.py
+    ├── report_generator.py
+    ├── template.html
+    ├── example.py
+    └── sample_report.txt
+```
+
