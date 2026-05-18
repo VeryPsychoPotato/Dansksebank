@@ -62,7 +62,7 @@ WHERE
 SELECT *
 FROM agreements a
 --for every row in agreements, sql does subquery count(*) in payments, and if those tables are big, it has to do a lot of calculations, which makes it perform very slowly
--- correct way to join agreement and payment tables and use group by and having clause
+-- correct way is to join agreement and payment tables and use group by and having clause
 
 WHERE (SELECT COUNT(*) FROM payments p 
        WHERE p.agreement_id = a.agreement_id) > 5
