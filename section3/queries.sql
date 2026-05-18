@@ -8,7 +8,7 @@ SELECT
 FROM customers c
 JOIN agreements a
     ON c.customer_id = a.customer_id
-WHERE a.status = 'active'
+WHERE a.status = 'ACTIVE'
   AND a.currency = 'EUR'
   AND c.segment = 'CORPORATE'
 GROUP BY c.customer_id, c.country
