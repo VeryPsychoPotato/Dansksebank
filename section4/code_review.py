@@ -1,5 +1,8 @@
 import pandas as pd
 import sqlalchemy
+import os
+from decimal import Decimal
+from sqlalchemy import create_engine, text
 
 # hardcoded login and plain text login is very bad from security side
 engine = sqlalchemy.create_engine("postgresql://admin:password123@prod-db:5432/finance")
@@ -35,10 +38,7 @@ def process_all_customers():
     return results
 
 # improved code snippet
-import os
-from decimal import Decimal
-import pandas as pd
-from sqlalchemy import create_engine, text
+
 
 DB_URL = os.getenv("DATABASE_URL")  # e.g. postgresql://user:pass@host:port/db
 engine = create_engine(DB_URL)

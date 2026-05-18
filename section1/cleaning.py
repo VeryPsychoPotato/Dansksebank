@@ -1,7 +1,8 @@
 import pandas as pd
 
 # read data
-df = pd.read_csv('C:/Users/Kernius/Danskebank/data/data.csv')
+url = "https://raw.githubusercontent.com/VeryPsychoPotato/Dansksebank/refs/heads/main/data/data.csv"
+df = pd.read_csv(url)
 
 print(df)
 
