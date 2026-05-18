@@ -42,7 +42,7 @@ WITH last_payments AS (
 active_customers AS (
     SELECT DISTINCT customer_id
     FROM agreements
-    WHERE status = 'active'
+    WHERE status = 'ACTIVE'
 )
 SELECT
     c.customer_id,
