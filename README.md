@@ -18,7 +18,7 @@ Polars - 1.48
 
 Original loop was slow, because it was processing data row by row
 
-Vectorised pandas solution uses NumPy-based array operations , which are executed in compiled C code and therefore much faster (and in general Python is nbot very fast, in comparison, C is the fastest code language and python is almost 80 times slower)
+Vectorised pandas solution uses NumPy-based array operations , which are executed in compiled C code and therefore much faster (and in general Python is not very fast, in comparison, C is the fastest code language and python is almost 80 times slower)
 
 Polars in theory should be even faster, but in my case it's a little bit slower. And it is probably because that not much manipulation is done with data, so vectorized pandas solution is more optimal for my case.
 
