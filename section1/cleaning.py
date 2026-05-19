@@ -32,7 +32,7 @@ def clean_agreements(df: pd.DataFrame) -> pd.DataFrame:
     df["has_date_logic_error"] = False
     
     # checks if date sequence is correct
-    df.loc[valid, "has_date_logic_error"] = (df.loc[valid, "end_date"] >= df.loc[valid, "start_date"])
+    df.loc[valid, "has_date_logic_error"] = (df.loc[valid, "end_date"] > df.loc[valid, "start_date"])
     
     # Payment validation
     df["monthly_payment"] = pd.to_numeric(df["monthly_payment"], errors="coerce")

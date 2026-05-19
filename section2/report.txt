@@ -1,0 +1,15 @@
+RUN SUMMARY
+-----------
+Total records: 8
+
+ERROR COUNTS
+------------
+Date errors: 2
+Date logic errors: 2
+Payment errors: 1
+
+RISK SCORE SUMMARY
+------------------
+Total customers: 7
+Total exposure: 3710.50
+Average exposure: 465.79
