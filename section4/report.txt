@@ -1,0 +1,33 @@
+---- REPORT SUMMARY----
+Rows: 4
+Columns: 3
+Column Names: Name, Age, Salary
+
+---- NUMERIC SUMMARY----
+
+Age:
+  count: 4.0
+  mean: 29.5
+  std: 4.203173404306164
+  min: 25.0
+  25%: 27.25
+  50%: 29.0
+  75%: 31.25
+  max: 35.0
+
+Salary:
+  count: 4.0
+  mean: 61250.0
+  std: 8539.125638299665
+  min: 50000.0
+  25%: 57500.0
+  50%: 62500.0
+  75%: 66250.0
+  max: 70000.0
+
+----DATA TABLE----
+   Name  Age  Salary
+  Alice   25   50000
+    Bob   30   60000
+Charlie   35   70000
+  Diana   28   65000

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<h1>{{ title }}</h1>
+
+<h2>Summary</h2>
+<p>Rows: {{ summary.num_rows }}</p>
+<p>Columns: {{ summary.num_columns }}</p>
+<p>Column Names: {{ summary.columns | join(', ') }}</p>
+
+{% if summary.numeric_summary %}
+<h2>Numeric Summary</h2>
+{% for col, stats in summary.numeric_summary.items() %}
+    <h3>{{ col }}</h3>
+    <ul>
+    {% for key, value in stats.items() %}
+        <li>{{ key }}: {{ value }}</li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+{% endif %}
+
+<h2>Data Table</h2>
+{{ table | safe }}
+
+</body>
+</html>
