@@ -44,9 +44,6 @@ class ReportGenerator:
 
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(html_content)
-        print("ABSOLUTE OUTPUT FILE:")
-        print(os.path.abspath(output_path))
-        print("FILE EXISTS:", os.path.exists(output_path))
         
     def export_excel(self, output_path: str) -> None: 
         self.df.to_excel(output_path, index=False)
@@ -59,7 +56,7 @@ class ReportGenerator:
             f.write(f"Columns: {summary['num_columns']}\n")
             f.write(f"Column Names: {', '.join(summary['columns'])}\n\n")
             if "numeric_summary" in summary:
-                f.write("---- NUMERIC SUMMARY----\n")
+                f.write("---- STATS SUMMARY----\n")
                 for col, stats in summary["numeric_summary"].items():
                     f.write(f"\n{col}:\n")
                     for stat_name, value in stats.items():
